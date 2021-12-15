@@ -1,7 +1,7 @@
 import os
 
 service_name = "mysql" #replace service_name with any service
-action_abs_path = "/sbin/reboot" #sometimes you might need to replace with /sbin/reboot or otherwise depending on the OS action you want to execute
+action_abs_path = "/sbin/reboot" #change system action as necessary. Ex: ```/sbin/shutdown```
 
 def checkService(service_name):
     status = os.system('systemctl status ' + service_name + ' > /root/pyrestart/null') #replace mysql with any service name
