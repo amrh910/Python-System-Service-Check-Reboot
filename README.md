@@ -14,12 +14,13 @@ To use this script, navigate to the directory in which the script is stored and 
 
 ## Cronjob
 To convert this script to a cronjob,
-1. Place this script in your server's /root directory
-2. open terminal and enter ```crontab -e```.
-3. Append to the crontab by adding after the last line the following statement:
+1. Login to your server as root
+2. Place this script in your server's /root directory
+3. open terminal and enter ```crontab -e```.
+4. Append to the crontab by adding after the last line the following statement:
 	```* * * * * /usr/bin/python /root/restartcheck.py```
 
 	Cronjobs are formatted as follow: ```[cronjob frequency] [compiler abs path] [script abs path]```
 	I like to use [crontab.guru](https://crontab.guru/) to save time when it comes to the cronjob frequency.
-4. Save and exit. 
-5. Confirm your cronjob was created by typing ```crontab -l``` and reviewing the output.
+5. Save and exit. 
+6. Confirm your cronjob was created by typing ```crontab -l``` and reviewing the output.
